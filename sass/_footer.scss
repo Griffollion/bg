@@ -1,0 +1,14 @@
+.copyright {
+    font-size: 14px;
+    font-size: 14px;
+    color: $text-subcolor;
+    border-top: 1px solid $border-color-1;
+    padding: 15px;
+    line-height: 19px;
+}
+
+@media screen and (min-widh: $switch-on-tablet) {
+    .copyright {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,33 @@
+.block-title {
+    margin-bottom: $title-offet-mob;
+    &__suptitle {
+        font-size: 20px;
+        font-weight: $weight-light;
+        color: $second-color;
+        margin-bottom: $suptitle-offet-mob;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 20px;
+            height: 2px;
+            margin-right: 10px;
+            background-color: $second-color;
+        }
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (min-width: $switch-on-tablet) {
+    .block-title {
+        margin-bottom: $title-offet-desk;
+        &__suptitle {
+            margin-bottom: $suptitle-offet-desk;
+        }
+    }
+}

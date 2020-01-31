@@ -1,0 +1,51 @@
+.nominations {
+  &__list {
+    ol {
+      counter-reset: myCounter;
+
+      &>li {
+        font-size: 16px;
+        margin-bottom: $list-item-offset;
+        position: relative;
+        padding-left: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          counter-increment: myCounter;
+          content: counter(myCounter);
+          color: $counters-color;
+          display: inline-flex;
+          font-size: inherit;
+          font-weight: $weight-bold;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $switch-on-desktop) {
+  .nominations {
+    display: flex;
+
+    &__title {
+      width: calc(100% / 3);
+    }
+
+    &__list {
+      width: calc(100% - (100% / 3));
+      ol {
+        display: flex;
+        flex-wrap: wrap;
+        &>li {
+          width: calc(100% / 3);
+        }
+      }
+    }
+  }
+}

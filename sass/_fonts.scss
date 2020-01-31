@@ -1,0 +1,78 @@
+/*Opensans from Google*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800,&subset=cyrillic&display=swap');
+
+@font-face {
+    font-family: 'custom-icons';
+    src:  url('../fonts/custom-icons.eot?xjbnrx');
+    src:  url('../fonts/custom-icons.eot?xjbnrx#iefix') format('embedded-opentype'),
+      url('../fonts/custom-icons.ttf?xjbnrx') format('truetype'),
+      url('../fonts/custom-icons.woff?xjbnrx') format('woff'),
+      url('../fonts/custom-icons.svg?xjbnrx#custom-icons') format('svg');
+    font-weight: $weight-normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  .icon {
+    font-family: 'custom-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: $weight-normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-arrow-left:before {
+    content: "\e90f";
+  }
+  .icon-arrow-right:before {
+    content: "\e900";
+  }
+  .icon-arrow-right-short:before {
+    content: "\e901";
+  }
+  .icon-close:before {
+    content: "\e902";
+  }
+  .icon-facebook:before {
+    content: "\e903";
+  }
+  .icon-instagram:before {
+    content: "\e904";
+  }
+  .icon-mail:before {
+    content: "\e905";
+  }
+  .icon-odnoklassniki:before {
+    content: "\e906";
+  }
+  .icon-pdf:before {
+    content: "\e907";
+  }
+  .icon-phone:before {
+    content: "\e908";
+  }
+  .icon-play:before {
+    content: "\e909";
+  }
+  .icon-telegram:before {
+    content: "\e90a";
+  }
+  .icon-twitter:before {
+    content: "\e90b";
+  }
+  .icon-vk:before {
+    content: "\e90c";
+  }
+  .icon-wear-1:before {
+    content: "\e90d";
+  }
+  .icon-wear-2:before {
+    content: "\e90e";
+  }
+  

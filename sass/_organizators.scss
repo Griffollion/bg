@@ -1,0 +1,34 @@
+.organizators {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__item {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:nth-child(2) {
+            order: -1;
+        }
+    }
+}
+
+@media screen and (min-width: $switch-on-desktop) {
+    .organizators {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__item {
+            margin-right: 30px;
+            margin-bottom: 0;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:nth-child(2) {
+                order: 0;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,17 @@
+.information {
+    p {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: $switch-on-desktop) {
+    .information {
+        p {
+            margin-bottom: 30px;
+        }
+    }
+}
