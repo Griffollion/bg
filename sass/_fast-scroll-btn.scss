@@ -1,9 +1,8 @@
 .fast-scroll-btn {
     display: none;
-
 }
 
-@media screen and (min-width: $switch-on-desctop) {
+@media screen and (min-width: $switch-on-desktop) {
     .fast-scroll-btn {
         position: fixed;
         bottom: 25px;
@@ -21,7 +20,7 @@
             &.visible {
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: center
             }
         }
     } 
