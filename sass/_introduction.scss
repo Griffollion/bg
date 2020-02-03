@@ -1,0 +1,36 @@
+.introduction {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &:first-child {
+            min-height: 40vh;
+            border-bottom: 1px solid #fff;
+        }
+        &:nth-child(2) {
+            min-height: 60vh;
+        }
+    }
+}
+
+@media screen and (min-width: $switch-on-desktop) {
+    .introduction {
+        min-height: unset;
+        flex-direction: row;
+        &__item {
+            &:first-child {
+                width: 60%;
+                min-height: unset;
+                border-bottom: unset;
+                border-right: 1px solid #fff;
+            }
+            &:nth-child(2) {
+                min-height: unset;
+                width: 40%;
+            }
+        }
+    }
+
+}

@@ -4,15 +4,16 @@
 
 @media screen and (min-width: $switch-on-desktop) {
     .fast-scroll-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
         position: fixed;
         bottom: 25px;
         right: 0;
         width: 70px;
         height: auto;
-    
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
+
         z-index: 2;
         &__item {
             display: none;

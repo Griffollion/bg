@@ -1,0 +1,24 @@
+.countdown {
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    flex-grow: 2;
+    &__title {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: $weight-light;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+    &__btn {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: $switch-on-desktop) {
+    .countdown {
+        padding: 20px 40px;
+    }
+}
