@@ -27,21 +27,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         .glider-prev,
         .glider-next {
             position: static;
             font-size: 20px;
             color: $text-subcolor;
             transition: color $transition-default;
+
             &:hover {
                 color: $counters-color;
             }
+
             &:aftive,
             &:focus,
             &:focus:active {
                 color: $counters-color;
             }
         }
+
         .glider-dots {
             margin: 0 20px;
         }
@@ -51,6 +55,7 @@
             height: 6px;
             margin: 0 5px;
             background-color: $counters-color;
+
             &.active {
                 background-color: $text-subcolor;
             }
@@ -60,14 +65,87 @@
 
 .gallery--portrait {
     position: relative;
-    height: 400px;
+    height: auto;
+
+    .glider {
+        height: 400px;
+    }
+
     .gallery__info-container {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: calc(100% / 5);
-        margin-left: calc(100% / 5);
-        height: 100%;
+        padding: 30px 15px;
         background-color: $second-color;
+        order: -1;
+        position: relative;
+        border-bottom: 1px solid #fff;
+    }
+    .gallery__controls {
+        position: absolute;
+        bottom: -52px;
+        right: 0;
+        border: 1px solid #fff;
+        display: flex;
+        z-index: 2;
+
+        button {
+            position: static;
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            border-right: 1px solid #fff;
+            font-size: 25px;
+            background-color: $second-color;
+            transition: background-color $transition-default;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            &:hover {
+                background-color: $hover-color-1;
+            }
+
+            &:active {
+                background-color: $active-color-1;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $switch-on-desktop) {
+    .gallery--portrait {
+        .gallery__info-container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: unset;
+            bottom: unset;
+            padding: 30px;
+            width: calc(100% / 5);
+            margin-left: calc(100% / 5);
+            height: 100%;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+            z-index: 2;
+        }
+
+        .gallery__controls {
+            right: -52px;
+            top: -1px;
+            bottom: unset;
+            left: unset;
+            border: 1px solid #fff;
+            display: inline-flex;
+            flex-direction: column;
+            button {
+                border-right: none;
+                border-bottom: 1px solid #fff;
+                &:last-child {
+                    border-bottom: none; 
+                }
+            }
+        }
     }
 }
