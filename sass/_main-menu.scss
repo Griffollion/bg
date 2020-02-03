@@ -5,31 +5,61 @@
   position: relative;
 }
 
-.main-menu-container .logo {
-  flex-shrink: 0;
-  padding: 10px 15px;
-  &>a {
+.main-menu-container {
+  .logo {
+    flex-shrink: 0;
+    padding: 10px 15px;
+    display: inline-flex;
+    align-items: center;
+  
+    &>a {
       display: inline-flex;
+      max-width: 170px;
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .instagram {
+    font-size: 20px;
+    margin-left: 30px;
+    flex-shrink: 0;
+  }
+} 
+
+@media screen and (min-width: $switch-on-desktop) {
+  .main-menu-container {
+    align-items: stretch;
+    min-height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main-menu-container {
+    .logo {
+      padding: 0;
+  
+      &>a {
+        display: inline-flex;
+        height: 100%;
+        align-items: center;
+        max-width: unset;
+      }
+    }
+    .instagram {
+      margin-left: 0;
+      position: absolute;
+      right: -45px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
   }
 }
 
-@media screen and (min-width: $switch-on-tablet) {
-  .main-menu-container {
-      align-items: stretch;
-      min-height: 70px;
-      padding-left: 20px;
-      padding-right: 20px;
-  }
-  .main-menu-container .logo {
-      padding: 0;
-      &>a {
-          display: inline-flex;
-          height: 100%;
-          align-items: center;
-      }
-  }
-}
-/*----------------------------*/ 
+/*----------------------------*/
 .main-menu__inner {
   position: absolute;
   top: 100%;
@@ -55,7 +85,7 @@
   outline: none;
   display: inline-flex;
   position: relative;
-  border-left: 1px solid #ECEDEC;
+  border-left: 1px solid $border-color-1;
 }
 
 .main-menu__links {
@@ -76,9 +106,11 @@
       font-size: 18px;
       position: relative;
       transition: color $transition-default;
+
       &:hover {
         color: $hover-color-1;
       }
+
       &:active {
         color: $active-color-1;
       }
@@ -87,6 +119,7 @@
     &.active {
       &>a {
         color: $second-color;
+
         &::after {
           content: '';
           width: 64px;
@@ -102,7 +135,7 @@
   }
 }
 
-@media screen and (min-width: $switch-on-tablet) {
+@media screen and (min-width: $switch-on-desktop) {
   .main-menu__btn {
     display: none;
   }
@@ -116,29 +149,34 @@
     height: 100%;
     pointer-events: auto;
   }
-  
+
   .main-menu__links {
     padding: 0;
     margin: 0;
     display: flex;
     height: 100%;
+
     &>li {
       margin: 0 30px 0 0;
       display: flex;
       align-items: center;
       position: relative;
+
       &:last-child {
         margin-right: 0;
       }
+
       &>a {
         height: 100%;
         display: inline-flex;
         position: static;
         align-items: center;
       }
+
       &.active {
         &>a {
           color: $second-color;
+
           &::after {
             top: calc(100% - 1px);
             left: 50%;

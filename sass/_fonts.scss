@@ -28,70 +28,63 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-down-long:before {
+  content: "\e912";
+}
+.icon-arrow-up-long:before {
+  content: "\e913";
+}
 .icon-arrow-left-short:before {
   content: "\e910";
 }
-
-.icon-arrow-left:before {
-  content: "\e90f";
-}
-
-.icon-arrow-right:before {
-  content: "\e900";
-}
-
 .icon-arrow-right-short:before {
   content: "\e901";
 }
-
+.icon-arrow-left:before {
+  content: "\e90f";
+}
+.icon-arrow-right:before {
+  content: "\e900";
+}
+.icon-arrow-up:before {
+  content: "\e911";
+}
 .icon-close:before {
   content: "\e902";
 }
-
 .icon-facebook:before {
   content: "\e903";
 }
-
-.icon-instagram:before {
-  content: "\e904";
-}
-
-.icon-mail:before {
-  content: "\e905";
-}
-
 .icon-odnoklassniki:before {
   content: "\e906";
 }
-
-.icon-pdf:before {
-  content: "\e907";
-}
-
-.icon-phone:before {
-  content: "\e908";
-}
-
-.icon-play:before {
-  content: "\e909";
-}
-
 .icon-telegram:before {
   content: "\e90a";
 }
-
+.icon-mail:before {
+  content: "\e905";
+}
+.icon-pdf:before {
+  content: "\e907";
+}
+.icon-phone:before {
+  content: "\e908";
+}
+.icon-play:before {
+  content: "\e909";
+}
 .icon-twitter:before {
   content: "\e90b";
 }
-
 .icon-vk:before {
   content: "\e90c";
 }
-
+.icon-instagram:before {
+  content: "\e904";
+}
 .icon-wear-1:before {
   content: "\e90d";
 }
-
 .icon-wear-2:before {
   content: "\e90e";
 }
