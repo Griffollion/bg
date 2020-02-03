@@ -10,7 +10,9 @@
     flex-shrink: 0;
     padding: 10px 15px;
     display: inline-flex;
+    justify-content: space-between;
     align-items: center;
+    flex-grow: 2;
   
     &>a {
       display: inline-flex;
@@ -40,6 +42,7 @@
   .main-menu-container {
     .logo {
       padding: 0;
+      flex-grow: unset;
   
       &>a {
         display: inline-flex;
@@ -71,6 +74,8 @@
   background-color: #fff;
   transition: transform $transition-default ease-out, opacity $transition-default;
   pointer-events: none;
+  border-top: 1px solid $border-color-1;
+  min-height: 100vh;
 
   &.active {
     transform: translateX(0);
