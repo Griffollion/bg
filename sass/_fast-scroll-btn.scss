@@ -1,21 +1,28 @@
 .fast-scroll-btn {
-    position: fixed;
-    bottom: 25px;
-    right: 0;
-    width: 70px;
-    height: auto;
+    display: none;
 
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    z-index: 2;
-    &__item {
-        display: none;
-        font-size: 65px;
-        &.visible {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+}
+
+@media screen and (min-width: $switch-on-desctop) {
+    .fast-scroll-btn {
+        position: fixed;
+        bottom: 25px;
+        right: 0;
+        width: 70px;
+        height: auto;
+    
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 2;
+        &__item {
+            display: none;
+            font-size: 65px;
+            &.visible {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
-    }
+    } 
 }
