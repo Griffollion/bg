@@ -21,6 +21,7 @@ body.locked {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
   &:active,
   &:focus,
   &:focus:active {
