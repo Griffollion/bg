@@ -1,4 +1,4 @@
-function addVideo(src) {
+function addVideo(src, width, height) {
   let div = document.createElement('div');
   div.className = 'video-container visible';
   div.innerHTML = ` <div class='video-container__iframe'>
@@ -6,8 +6,8 @@ function addVideo(src) {
                       <span class='icon icon-close'></span>
                     </div>
                     <iframe 
-                      width="560"
-                      height="315"
+                      width="${width}"
+                      height="${height}"
                       src="${src}" frameborder="0"
                       allow="accelerometer;
                       autoplay;
@@ -20,15 +20,28 @@ function addVideo(src) {
   document.body.prepend(div);
 }
 
+function getDeviceSizes() {
+  let deviceSizes = {
+    width: parseInt(window.innerWidth / 2),
+    height: parseInt((window.innerWidth / 2) / 1.8),
+  }
+
+  return deviceSizes;
+}
+
+window.onresize = getDeviceSizes;
+
 function showVideo(btn) {
   let videoContainer = document.querySelector('.video-container');
   let src = btn.getAttribute('data-href');
   let body = document.querySelector('body');
+  let deviceSizes = getDeviceSizes();
+
 
   body.classList.add('locked');
 
   if (!videoContainer) {
-    addVideo(src);
+    addVideo(src, deviceSizes.width, deviceSizes.height);
   } else {
     videoContainer.classList.add('visible');
   }
@@ -36,6 +49,7 @@ function showVideo(btn) {
 
 function hideVideo() {
   let body = document.querySelector('body');
+  let videoContainer = document.querySelector('.video-container');
 
   videoContainer.classList.remove('visible');
   body.classList.remove('locked');
@@ -44,7 +58,7 @@ function hideVideo() {
 function onClickClose(elem, parentContainer) { // вызвать в момент показа окна, где elem - окно
   function outsideClickListener(event) {
     if (!elem.contains(event.target) && isVisible(elem)) {  // проверяем, что клик не по элементу и элемент виден
-      elem.closest(parentContainer).classList.remove('visible'); //скрыть
+      hideVideo();
       document.removeEventListener('click', outsideClickListener);
     }
   }
@@ -66,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener('click', function () {
     var ifr = document.querySelector('.video-container.visible iframe');
-    var ifrParent = '.video-container';
+    var ifrParent = '.video-container.visible';
     onClickClose(ifr, ifrParent);
   });
 });
