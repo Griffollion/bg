@@ -3,10 +3,14 @@
     margin-bottom: $voting-tiles-offset;
   }
   &.voted {
-    .btn {
+    [data-js="voting-btn"] {
       pointer-events: none;
     }
+    .voting-tile:not(.voted) .btn{
+      opacity: 0;
+    }
   }
+
 }
 
 .voting-tile {
@@ -85,11 +89,28 @@
 
   &__votes {
     font-size: 16px;
+    &::before {
+      content: attr(data-votes);
+      display: inline-flex;
+      margin-right: 5px;
+    }
   }
 
   &.voted {
     .voting-tile__votes {
       font-weight: $weight-bold;
+    }
+    [data-js="voting-btn"] {
+      width: 40px;
+      background-color: $border-color-1;
+      border-color: $border-color-1;
+      color: $text-subcolor;
+      span:not(.icon) {
+        display: none;
+      }
+      span.icon {
+        margin-left: 0;
+      }
     }
   }
 }
