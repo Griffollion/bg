@@ -21,6 +21,7 @@ body.locked {
 a {
   text-decoration: none;
   color: inherit;
+  transition: $transition-default;
   cursor: pointer;
   &:active,
   &:focus,
@@ -147,6 +148,11 @@ h6 {
     position: relative;
     overflow: hidden;
   }
+
+  &--voting-tiles {
+    padding-bottom: $section-offet-mob - $voting-tiles-offset;
+  }
+
 }
 
 @media screen and (min-width: $switch-on-desktop) {
@@ -189,6 +195,9 @@ h6 {
     }
     &--first {
       padding-top: 40px;
+    }
+    &--voting-tiles {
+      padding-bottom: $section-offet-desk - $voting-tiles-offset;
     }
   }
 }

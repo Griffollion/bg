@@ -1,0 +1,139 @@
+.voting-tiles {
+  &__item {
+    margin-bottom: $voting-tiles-offset;
+  }
+  &.voted {
+    .btn {
+      pointer-events: none;
+    }
+  }
+}
+
+.voting-tile {
+  &__view {
+    height: 400px;
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__s-n {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    font-size: 25px;
+    color: #fff;
+
+    &:hover {
+      color: $hover-color-1;
+    }
+
+    &:active,
+    &:focus,
+    &:active:focus {
+      color: $active-color-1;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: $weight-bold;
+    color: #fff;
+
+    &>span {
+      padding: 15px;
+      position: relative;
+      z-index: 2;
+      display: block;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 55px;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    }
+  }
+
+  &__controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__votes {
+    font-size: 16px;
+  }
+
+  &.voted {
+    .voting-tile__votes {
+      font-weight: $weight-bold;
+    }
+  }
+}
+
+@media screen and (min-width: 570px) {
+  .voting-tiles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item {
+      width: calc(100% /2 - 10px);
+    }
+  }
+}
+
+@media screen and (min-width: 570px) {
+  .voting-tiles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item {
+      width: calc(100% /2 - 10px);
+    }
+  }
+}
+
+@media screen and (min-width: 855px) {
+  .voting-tiles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item {
+      width: calc(100% /3 - 10px);
+    }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .voting-tiles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item {
+      width: calc(100% / 4 - 10px);
+    }
+  }
+}
