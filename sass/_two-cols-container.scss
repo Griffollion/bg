@@ -1,0 +1,30 @@
+$sidebar-width: 300px;
+
+.two-cols-container {
+    display: flex;
+    flex-direction: column;
+    &__sidebar {
+        margin-bottom: 30px;
+        order: 0;
+    }
+    &__main {
+        order: 1;
+    }
+}
+
+@media screen and (min-width: $switch-on-desktop) {
+    .two-cols-container {
+        flex-direction: row;
+        &__sidebar {
+            margin-bottom: 0;
+            order: 1;
+            width: $sidebar-width;
+            flex-shrink: 0;
+        }
+        &__main {
+            order: 0;
+            width: 100% - $sidebar-width;
+            padding-right: 20px;
+        }
+    }
+}

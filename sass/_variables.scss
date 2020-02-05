@@ -12,7 +12,7 @@ $active-color-2: #7a7a7a;
 $border-color-1: #ECEDEC; 
 
 /*-------Fonts----------*/
-$default-font: 'Open Sans', Arial, Helvetica, sans-serif; 
+$font-default: 'Open Sans', Arial, Helvetica, sans-serif; 
 
 /*-------Fonts Weights----------*/
 $weight-light: 300;
@@ -34,12 +34,13 @@ $fsz-h4-desk: 24px;
 $fsz-h5-desk: 20px;
 $fsz-h6-desk: 18px;
 
-$fsz-default-text: 16px;
+$fsz-text-default: 16px;
 $fsz-subtext: 14px;
 $fsz-btn: 20px;
 
 /*------Line heights---------*/
 $lineheight-default: 1.4;
+$lineheight-text-content: 1.6;
 
 /*-------Offsets------*/
 $section-offet-mob: 60px;
@@ -47,7 +48,7 @@ $section-offet-desk: 100px;
 $title-offet-mob: 20px; 
 $title-offet-desk: 24px; 
 $suptitle-offet-mob: 5px; 
-$suptitle-offet-desk: 10px; 
+$suptitle-offet-desk: 5px; 
 $fixed-elems-offset: 70px;
 $list-item-offset: 25px;
 $voting-tiles-offset: 40px;
@@ -56,7 +57,6 @@ $voting-tiles-offset: 40px;
 $switch-on-tablet: 768px;
 $switch-on-desktop: 1200px;
 $button-height: 50px;
-
 
 /*------Transitions--------*/
 $transition-default: .25s;

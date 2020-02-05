@@ -34,6 +34,18 @@
             color: #fff;
         }
     }
+
+    &--type-2 {
+        margin-bottom: 20px;
+        .block-title__suptitle {
+            color: $text-subcolor;
+            font-size: 18px;
+            &::before {
+                display: none;
+            
+            }
+        }
+    }
 }
 
 @media screen and (min-width: $switch-on-tablet) {
@@ -41,6 +53,9 @@
         margin-bottom: $title-offet-desk;
         &__suptitle {
             margin-bottom: $suptitle-offet-desk;
+        }
+        &--type-2 {
+            margin-bottom: 20px;
         }
     }
 }

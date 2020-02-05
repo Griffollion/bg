@@ -1,0 +1,64 @@
+$li-offset: 15px;
+
+.text-content {
+
+  ul,
+  ol,
+  p,
+  a {
+    font-size: $fsz-text-default;
+  }
+
+  a {
+    line-height: $lineheight-default;
+  }
+
+  ul,
+  ol,
+  p {
+    margin-bottom: 15px;
+    line-height: $lineheight-text-content;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul,
+  ol {
+    li {
+      margin-bottom: $li-offset;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ul,
+  ol {
+
+    &>ul,
+    ol {
+      margin-left: 15px;
+      margin-top: $li-offset
+    }
+  }
+
+  ol {
+    counter-reset: li;
+
+    li {
+      &:before {
+        counter-increment: li;
+        content: counters(li, ".") ". ";
+      }
+    }
+  }
+
+  &__section {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

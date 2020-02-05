@@ -6,7 +6,7 @@
 html,
 body {
   font-weight: 400;
-  font-family: $default-font;
+  font-family: $font-default;
   font-size: 0;
   color: #221F18;
   margin: 0;
@@ -32,7 +32,7 @@ a {
 
 p {
   line-height: 1.6;
-  font-size: $fsz-default-text;
+  font-size: $fsz-text-default;
 }
 
 
@@ -106,6 +106,31 @@ h6 {
 
   &:active {
     color: $hover-color-1;
+  }
+}
+
+//link default
+.link-default {
+  display: inline-flex;
+  align-items: center;
+  color: $second-color;
+  &:hover {
+    color: $hover-color-1;
+  }
+  &:active,
+  &:focus,
+  &:focus:active {
+    color: $active-color-1;
+  }
+
+  .icon {
+    margin: 0 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &::last-child {
+      margin-right: 0;
+    }
   }
 }
 

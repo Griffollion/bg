@@ -39,7 +39,7 @@
     transition: border-color $transition-default;
     font-size: 16px;
     line-height: $lineheight-default;
-    font-family: $default-font;
+    font-family: $font-default;
     &:hover {
       border-color: $hover-color-1;
     }
