@@ -161,12 +161,12 @@
             <div class="media">
               <div class="media__container">
                 <div class="media__content">
-                  <div data-href="https://www.youtube.com/embed/WpU3X_ZeM_A" class="video-container-btn" data-js="show-video">
+                  <div data-target="#test-modal" class="video-container-btn" data-js="modal">
                   <div class="video">
                     <img data-src="./images/other/bg-for-video.jpg" alt="img" class="video__preview lazy">
-                    <spa class="video__icon">
+                    <span class="video__icon">
                       <span class="icon icon-play"></span>
-                      </span>
+                    </span>
                   </div>
                 </div>
                 </div>
@@ -510,6 +510,15 @@
     </section>
   </footer>
 
+  <div class="modal" id="test-modal">
+    <div class="modal__content">
+        <div class="modal__close" data-js="modal-close">
+          <span class="icon icon-close"></span>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WpU3X_ZeM_A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
   <!-- Scripts for Slider -->
   <link rel="stylesheet" href="./plugins/gslider/glider.min.css">
   <script src="./plugins/gslider/glider.min.js"></script>
@@ -519,7 +528,8 @@
   <script src="./js/global.js"></script>
   <script src="./js/fast-scroll-btn.js"></script>
   <script src="./js/gallery.js"></script>
-  <script src="./js/video-frame.js"></script>
+  <script src="./js/modal.js"></script>
+  <!-- <script src="./js/video-frame.js"></script> -->
 
 </body>
 
