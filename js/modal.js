@@ -32,8 +32,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
             hideModal(target);
         })
     });
-
-    modalClose
-
-
 });

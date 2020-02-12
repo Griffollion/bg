@@ -1,0 +1,105 @@
+.registration {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__close {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 15px;
+    color: #ADB4BF;
+    margin-bottom: 10px;
+    width: 100%;
+    .icon {
+      font-size: 15px;
+      color: #ADB4BF;
+    }
+  }
+
+  &__container {
+    max-width: 350px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: $weight-bold;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: $lineheight-default;
+    margin-bottom: 30px;
+  }
+
+  &__phone {
+    margin-bottom: 20px;
+  }
+
+  &__confirm {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__confirm-wrapper {
+    margin-bottom: 10px;
+  }
+
+  &__confirm-input {
+    margin-bottom: 10px;
+  }
+
+  &__confirm-btn {
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__confirm-timer {
+    font-size: 14px;
+    color: $text-subcolor;
+  }
+
+  &__confirm-reset {
+    font-size: 16px;
+  }
+}
+
+
+
+@media screen and (min-width: $switch-on-tablet) {
+  .registration {
+
+    &__confirm-input {
+      margin-bottom: 0;
+    }
+
+    &__confirm-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &>* {
+        width: calc(50% - 5px);
+      }
+    }
+  }
+}

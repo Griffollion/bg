@@ -132,6 +132,15 @@ h6 {
       margin-right: 0;
     }
   }
+
+  &--underlined {
+    border-bottom: 1px dashed;
+  }
+}
+
+// 
+.hide {
+  display: none !important;
 }
 
 // Container 

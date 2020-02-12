@@ -100,11 +100,12 @@
     .voting-tile__votes {
       font-weight: $weight-bold;
     }
-    [data-js="voting-btn"] {
+    [data-selected=""] {
       width: 40px;
       background-color: $border-color-1;
       border-color: $border-color-1;
       color: $text-subcolor;
+      pointer-events: none;
       span:not(.icon) {
         display: none;
       }

@@ -19,6 +19,10 @@
         transition: transform $transition-default;
         cursor: unset;
         position: relative;
+        max-width: calc(100% - 20px);
+        width: 600px;
+        display: flex;
+        justify-content: center;
     }
     &__close {
         position: absolute;
@@ -38,6 +42,7 @@
     }
 }
 
-[data-js="modal-close"] {
+[data-js="modal-close"],
+[data-js="modal"] {
     cursor: pointer;
 }

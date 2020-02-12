@@ -88,7 +88,7 @@
               <div class="voting-tile__controls">
                 <div class="voting-tile__votes" data-votes='3'>голоса</div>
                 <div class="voting-tile__btn">
-                  <button class="btn btn--type-3 btn--s" data-js="voting-btn">
+                  <button class="btn btn--type-3 btn--s" data-selected="" data-target="#registration" data-js="modal">
                     <span>Отдать голос</span> <span class="icon icon-like"></span>
                   </button>
                 </div>
@@ -109,7 +109,7 @@
               <div class="voting-tile__controls">
                 <div class="voting-tile__votes" data-votes='3'>голоса</div>
                 <div class="voting-tile__btn">
-                  <button class="btn btn--type-3 btn--s" data-js="voting-btn">
+                  <button class="btn btn--type-3 btn--s" data-selected="" data-target="#registration" data-js="modal">
                     <span>Отдать голос</span> <span class="icon icon-like"></span>
                   </button>
                 </div>
@@ -130,7 +130,7 @@
               <div class="voting-tile__controls">
                 <div class="voting-tile__votes" data-votes='3'>голоса</div>
                 <div class="voting-tile__btn">
-                  <button class="btn btn--type-3 btn--s" data-js="voting-btn">
+                  <button class="btn btn--type-3 btn--s" data-selected="" data-target="#registration" data-js="modal">
                     <span>Отдать голос</span> <span class="icon icon-like"></span>
                   </button>
                 </div>
@@ -151,7 +151,7 @@
               <div class="voting-tile__controls">
                 <div class="voting-tile__votes" data-votes='3'>голоса</div>
                 <div class="voting-tile__btn">
-                  <button class="btn btn--type-3 btn--s" data-js="voting-btn">
+                  <button class="btn btn--type-3 btn--s" data-selected="" data-target="#registration" data-js="modal">
                     <span>Отдать голос</span> <span class="icon icon-like"></span>
                   </button>
                 </div>
@@ -172,7 +172,7 @@
               <div class="voting-tile__controls">
                 <div class="voting-tile__votes" data-votes='3'>голоса</div>
                 <div class="voting-tile__btn">
-                  <button class="btn btn--type-3 btn--s" data-js="voting-btn">
+                  <button class="btn btn--type-3 btn--s" data-selected="" data-target="#registration" data-js="modal">
                     <span>Отдать голос</span> <span class="icon icon-like"></span>
                   </button>
                 </div>
@@ -193,7 +193,7 @@
               <div class="voting-tile__controls">
                 <div class="voting-tile__votes" data-votes='3'>голоса</div>
                 <div class="voting-tile__btn">
-                  <button class="btn btn--type-3 btn--s" data-js="voting-btn">
+                  <button class="btn btn--type-3 btn--s" data-selected="" data-target="#registration" data-js="modal">
                     <span>Отдать голос</span> <span class="icon icon-like"></span>
                   </button>
                 </div>
@@ -214,7 +214,7 @@
               <div class="voting-tile__controls">
                 <div class="voting-tile__votes" data-votes='3'>голоса</div>
                 <div class="voting-tile__btn">
-                  <button class="btn btn--type-3 btn--s" data-js="voting-btn">
+                  <button class="btn btn--type-3 btn--s" data-selected="" data-target="#registration" data-js="modal">
                     <span>Отдать голос</span> <span class="icon icon-like"></span>
                   </button>
                 </div>
@@ -235,7 +235,7 @@
               <div class="voting-tile__controls">
                 <div class="voting-tile__votes" data-votes='3'>голоса</div>
                 <div class="voting-tile__btn">
-                  <button class="btn btn--type-3 btn--s" data-js="voting-btn">
+                  <button class="btn btn--type-3 btn--s" data-selected="" data-target="#registration" data-js="modal">
                     <span>Отдать голос</span> <span class="icon icon-like"></span>
                   </button>
                 </div>
@@ -375,11 +375,51 @@
     </section>
   </footer>
 
+  <div class="modal" id="registration">
+    <div class="modal__content">
+        <div class="registration">
+          <div class="registration__close">
+            <span class="icon icon-close" data-js="modal-close"></span>
+          </div>
+          <div class="registration__container">
+            <div class="registration__title">Регистрация</div>
+            <div class="registration__text">Чтобы проголосовать, подтвердите ваш номер телефона</div>
+            <div class="registration__form">
+              <form class="form">
+                <div class="registration__phone">
+                  <input type="number" placeholder="+ 375 (__) ___-__-__">
+                </div>
+                <div class="btn btn--type-1" data-js="show-code-confirm">Отправить СМС с кодом</div>
+                <div class="registration__confirm">
+                  <div class="registration__confirm-wrapper">
+                    <div class="registration__confirm-input">
+                      <input type="text" placeholder="Код из СМС">
+                    </div>
+                    <div class="registration__confirm-btn">
+                      <div class="btn btn--type-1"  data-js="modal-close" data-voting="voting-btn">Подтвердить</div>
+                    </div>
+                  </div>
+                  <div class="registration__confirm-timer">
+                    Отправить код повторно можно будет через 53 секунд
+                  </div>
+                  <a href="#" class="registration__confirm-reset link-default link-default--underlined">
+                    Отправить код повторно
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
   <script src="../js/lazy-load.js"></script>
   <script src="../js/mobile-menu.js"></script>
   <script src="../js/global.js"></script>
   <script src="../js/voting-tiles.js"></script>
   <script src="../js/fast-scroll-btn.js"></script>
+  <script src="../js/modal.js"></script>
+  <script src="../js/registration.js"></script>
 </body>
 
 </html>
