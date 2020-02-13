@@ -11,7 +11,7 @@
 
     .glider-slide {
         height: 100% !important;
-        background-color: $second-color;
+        background-color: #fff;
 
         img {
             height: 100%;
@@ -123,8 +123,8 @@
             right: unset;
             bottom: unset;
             padding: 30px;
-            width: calc(100% / 5);
-            margin-left: calc(100% / 5);
+            width: calc(100% / 4);
+            margin-left: calc(100% / 4);
             height: 100%;
             border-left: 1px solid #fff;
             border-right: 1px solid #fff;
@@ -146,6 +146,24 @@
                     border-bottom: none; 
                 }
             }
+        }
+
+        .block-title h2 {
+            font-size: 26px;
+        }
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .gallery--portrait {
+        .gallery__info-container {
+            width: calc(100% / 5);
+            margin-left: calc(100% / 5);
+
+        }
+
+        .block-title h2 {
+            font-size: $fsz-h2-desk;
         }
     }
 }

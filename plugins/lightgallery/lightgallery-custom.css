@@ -1,0 +1,39 @@
+.lg-fullscreen,
+.lg-download {
+    display: none;
+}
+
+
+.lg-close,
+.lg-prev,
+.lg-next {
+    font-family: 'custom-icons' !important;
+}
+
+.lg-toolbar .lg-close {
+    font-size: 20px;
+}
+
+.lg-close::before {
+        content: '\e902';
+}
+
+.lg-close::after {
+    display: none;
+}
+
+.lg-prev::before {
+        content: '\e90f';
+}
+
+.lg-prev::after {
+    display: none;
+}
+
+.lg-next::after {
+        content: '\e900';
+}
+
+.lg-next::before {
+    display: none;
+}
