@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const modal = document.querySelectorAll('.modal');
     var isOpen = false;
 
+    var my_video = document.getElementById("my_video");
+    var my_video = my_video.getElementsByTagName("iframe")[0].contentWindow;
+
     function showModal(target) {
         let modal = document.querySelector(target);
         modal.classList.add('active')
@@ -14,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     function hideModal(target) {
         target.closest('.modal').classList.remove('active');
         document.body.classList.remove('locked');
+        my_video.postMessage('{"event": "command", "func": "pauseVideo", "args": ""}', "*");
         isOpen = false;
     }
 
@@ -23,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             if (!elem.contains(event.target) && isVisible(elem)) {  // проверяем, что клик не по элементу и элемент виден
                 modal.forEach(el => {
                     el.classList.remove('active');
+                    my_video.postMessage('{"event": "command", "func": "pauseVideo", "args": ""}', "*");
                 });
                 document.body.classList.remove('locked');
                 document.removeEventListener('click', outsideClickListener);
