@@ -85,6 +85,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &-text {
+      font-size: 14px;
+      line-height: $lineheight-default;
+    }
   }
 
   &__votes {
@@ -95,6 +99,7 @@
       margin-right: 5px;
     }
   }
+  
 
   &.voted {
     .voting-tile__votes {
