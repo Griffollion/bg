@@ -187,6 +187,16 @@ h6 {
     padding-bottom: $section-offet-mob - $voting-tiles-offset;
   }
 
+  &.animated-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform $transition-block-animation, opacity $transition-block-animation;
+    &.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 }
 
 @media screen and (min-width: $switch-on-desktop) {
