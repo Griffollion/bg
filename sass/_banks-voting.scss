@@ -1,0 +1,19 @@
+.banks-votong {
+  &__title {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  &__voting {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: $switch-on-desktop) {
+  .banks-votong {
+    &__voting {
+      margin-top: 25px;
+    }
+  }
+}

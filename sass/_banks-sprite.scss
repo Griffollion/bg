@@ -1,0 +1,81 @@
+.icon-bank {
+    background-image: url(../images/sprites/banks.png);
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    &--absolut {
+        background-position: 0 -24px*0; 
+    }
+    &--alfa {
+        background-position: 0 -24px*1; 
+    }
+    &--dabrabyt {
+        background-position: 0 -24px*15;
+    }
+    &--reshenie {
+        background-position: 0 -24px*23;
+    }
+    &--belinvest {
+        background-position: 0 -24px*5;
+    }
+    &--idea {
+        background-position: 0 -24px*14;
+    }
+    &--rrbank {
+        background-position: 0 -24px*20;
+    }
+    &--fransabank {
+        background-position: 0 -24px*12;
+    }
+    &--belveb {
+        background-position: 0 -24px*10;
+    }
+    &--bnb {
+        background-position: 0 -24px*7;
+    }
+    &--belagraprom {
+        background-position: 0 -24px*2;
+    }
+    &--bps {
+        background-position: 0 -24px*8;
+    }
+    &--tk {
+        background-position: 0 -24px*22;
+    }
+    &--mtb {
+        background-position: 0 -24px*16;
+    }
+    &--statusbank {
+        background-position: 0 -24px*11;
+    }
+    &--zepter {
+        background-position: 0 -24px*25;
+    }
+    &--vtb {
+        background-position: 0 -24px*24;
+    }
+    &--belgazprom {
+        background-position: 0 -24px*4;
+    }
+    &--paritet {
+        background-position: 0 -24px*18;
+    }
+    &--bta {
+        background-position: 0 -24px*9;
+    }
+    &--prior {
+        background-position: 0 -24px*19;
+    }
+    &--texnobank {
+        background-position: 0 -24px*21;
+    }
+    &--belarusbank {
+        background-position: 0 -24px*3;
+    }
+    &--bsb {
+        background-position: 0 -24px*6;
+    }
+  }

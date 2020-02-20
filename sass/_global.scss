@@ -150,6 +150,18 @@ h6 {
   padding-right: 15px;
   width: 1200px;
   margin: 0 auto;
+  &--bg-white {
+    background-color: #fff;
+  }
+
+}
+
+@media screen and (min-width: $switch-on-tablet) {
+  .container {
+    &--with-paddings {
+      padding: 40px 30px;
+    }
+  }
 }
 
 @media screen and (min-width: 1500px) {
@@ -185,6 +197,12 @@ h6 {
 
   &--voting-tiles {
     padding-bottom: $section-offet-mob - $voting-tiles-offset;
+  }
+
+  &--branded {
+    .branding-link  {
+      display: none;
+    }
   }
 
   &.animated-container {
@@ -242,6 +260,30 @@ h6 {
     }
     &--voting-tiles {
       padding-bottom: $section-offet-desk - $voting-tiles-offset;
+    }
+
+    &--branded {
+      .container {
+        position: relative;
+        z-index: 2;
+        padding: 40px 30px;
+      }
+
+      .branding-link  {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: calc(100% - 140px);
+        height: 100%;
+        // background-image: url(../images/branding/branding.jpg);
+        background-repeat: no-repeat;
+        background-color: #999;
+        background-size: cover;
+        margin-left: 70px;
+        margin-right: 70px;
+      }
     }
   }
 }

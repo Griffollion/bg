@@ -1,0 +1,18 @@
+.banks-list {
+    &__item {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: $switch-on-tablet) {
+    .banks-list {
+        columns: 2 auto; 
+    }
+}
+
+@media screen and (min-width: $switch-on-desktop) {
+    .banks-list {
+        columns: 4 auto; 
+    }
+}
+
