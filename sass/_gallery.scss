@@ -3,6 +3,11 @@
     width: 100%;
     font-size: 16px;
 
+    .glider {
+        overflow: hidden;
+    }
+
+
     .glider-contain,
     .glider,
     .glider-track {
@@ -36,13 +41,13 @@
             transition: color $transition-default;
 
             &:hover {
-                color: $counters-color;
+                color: $hover-color-1;
             }
 
             &:aftive,
             &:focus,
             &:focus:active {
-                color: $counters-color;
+                color: $active-color-1;
             }
         }
 
@@ -69,15 +74,18 @@
 
     .glider {
         height: 400px;
+        position: relative;
     }
+
 
     .gallery__info-container {
         padding: 30px 15px;
         background-color: $second-color;
         order: -1;
         position: relative;
-        border-bottom: 1px solid #fff;
+    
     }
+
     .gallery__controls {
         position: absolute;
         bottom: -52px;
@@ -128,6 +136,7 @@
             height: 100%;
             border-left: 1px solid #fff;
             border-right: 1px solid #fff;
+            border-bottom: none;
             z-index: 2;
         }
 
@@ -139,11 +148,13 @@
             border: 1px solid #fff;
             display: inline-flex;
             flex-direction: column;
+
             button {
                 border-right: none;
                 border-bottom: 1px solid #fff;
+
                 &:last-child {
-                    border-bottom: none; 
+                    border-bottom: none;
                 }
             }
         }

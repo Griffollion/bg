@@ -8,6 +8,7 @@
         margin-bottom: $list-item-offset;
         position: relative;
         padding-left: 30px;
+        line-height: $lineheight-default;
 
         &:last-child {
           margin-bottom: 0;

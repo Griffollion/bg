@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     slidesToShow: 1,
     slidesToScroll: 1,
     draggable: true,
-    scrollLock: false,
+    scrollLock: true,
+    scrollLockDelay: 25,
     rewind: true,
     arrows: {
       prev: "#glider-prev",

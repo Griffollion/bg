@@ -12,6 +12,7 @@
     transition: background-color $transition-default;
     position: relative;
     padding: 10px;
+    min-height: 100px;
     &::before,
     &::after {
         content: '';
@@ -52,5 +53,6 @@
 @media screen and (min-width: $switch-on-desktop) {
     .partners__item {
         width: calc(100% / 6);
+        min-height: 150px;
     }
 }

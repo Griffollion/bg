@@ -97,6 +97,10 @@ h6 {
   }
 }
 
+.fs-25 {
+  font-size: 25px;
+}
+
 .hover-color-default {
   transition: color $transition-default;
 
@@ -287,3 +291,43 @@ h6 {
     }
   }
 }
+
+// hide text
+
+@media screen and (max-width: $switch-on-tablet) {
+  [data-js="hidden-text"].invisible {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    max-height: 30px;
+    transition: max-height $transition-default;
+    cursor: pointer;
+    p {
+      opacity: 0;
+    }
+    &::before {
+      content: 'Показать все';
+      font-size: 16px;
+      color: $second-color;
+      border-bottom: 1px dashed $second-color;
+      transition: color $transition-default, border-color $transition-default;
+    }
+    &::before:hover {
+      color: $hover-color-1;
+      border-color: $hover-color-1;
+    }
+    &::before:active {
+      color: $active-color-1;
+      border-color: $active-color-1;
+    }
+  }
+  [data-js="hidden-text"].invisible.active {
+    p {
+      opacity: 1;
+    }
+    &::before {
+      display: none;
+    }
+  }
+}
+
